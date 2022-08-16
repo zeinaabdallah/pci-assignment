@@ -4,4 +4,6 @@ and users’ QoS. In this work, the main focus is on the PCI assignment for Smal
 HetNets are proposed for their capacity to handle the explosive growth of network data
 traffic. However, with the limited number of available PCIs, and the aim to reduce PCI
 conflicts and confusions, it can be challenging to allocate and reuse PCIs to cells in hot
-areas without affecting the performance of the cellular network. 
+areas without affecting the performance of the cellular network. Clustering techniques are used to divide a mobility dataset of users into different
+clusters of high activity. Their identification contributes to the PCI allocation process, which gets modelled as a graph coloring problem. 
+
