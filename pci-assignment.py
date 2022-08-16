@@ -31,13 +31,13 @@ def project(dist_exp):
     print(dftot)
     # number of rows in df = df.shape[0]
 
-    # gmm = GaussianMixture(n_components = 3)
-    # gmm.fit(dftot[['X-coordinate', 'Y-coordinate']])
-    # clusters = gmm.predict(dftot[['X-coordinate', 'Y-coordinate']])
-    # dftot['cluster'] = clusters
-    #
-    # plt.scatter(x=dftot["X-coordinate"], y=dftot["Y-coordinate"],s=1, c=dftot["cluster"])
-    # plt.show()
+    gmm = GaussianMixture(n_components = 3)
+    gmm.fit(dftot[['X-coordinate', 'Y-coordinate']])
+    clusters = gmm.predict(dftot[['X-coordinate', 'Y-coordinate']])
+    dftot['cluster'] = clusters
+
+    plt.scatter(x=dftot["X-coordinate"], y=dftot["Y-coordinate"],s=1, c=dftot["cluster"])
+    plt.show()
 
     from sklearn.cluster import KMeans
     from yellowbrick.cluster import KElbowVisualizer
